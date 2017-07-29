@@ -1,0 +1,119 @@
+/*购物车样式*/
+.car_header{
+	min-width: 300px;/* 为了更好的布局*/
+	margin: 0 auto;
+	background: #fece01;
+	height: 80px;
+	width: 100%;
+	position: relative;
+}
+.car_header h2{
+	text-align: center;
+	height: 80px;
+	line-height: 80px;
+	font-size: 36px;
+	font-weight: normal;
+}
+.article ul .car-init{
+	font-family:"iconfont";
+	font-size: 200px;
+	text-align: center;
+	margin-top: 50px;
+}
+.article ul .car-init p{
+	font-size: 20px;
+}
+.article ul li{
+	width: 98%;
+	border: 1px solid #ddd;
+	margin: 0 auto;
+	margin-top: 10px;
+	position: relative;
+}
+.article ul li .shop-list{
+	display: block;
+	overflow: hidden;
+}
+ .article ul li .shop-list img{
+	width: 50%;
+	display: inline-block;
+	text-decoration: none;
+}
+.article ul li .shop-list .descript{
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+}
+.article ul li .shop-list .descript h2{
+	padding: 5px;
+	padding-left: 0;
+	font-size: 22px;
+}
+.article ul li .shop-list .descript p{
+	font-size: 18px;
+	color: #666;
+}
+.article ul li .shop-list .descript p:last-child {
+	position: absolute;
+	font-size: 18px;
+	bottom: 15px;
+}
+.article ul li .shop-list .descript p:last-child span{
+	font-size: 16px;
+	text-decoration: line-through;
+	padding-left: 5px;
+}
+
+.clear{
+	position: fixed;
+	bottom: 130px;
+	font-size: 26px;
+	width: 100%;
+}
+.clear ul li{
+	float: left;
+	height: 50px;
+	line-height: 50px;
+	
+}
+.clear ul .clear-data{
+	width: 60%;
+	padding-left: 20px;
+	background: #fff;
+}
+.clear ul .clear-btn{
+	width: 40%;
+	text-align: center;
+	background: #fece01;
+	cursor: pointer;
+}
+/* zhifu jiemian */
+#sure{
+	background: #fff;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 100;
+	display: none;
+}
+#sure .sure-back{
+	position: absolute;
+	font-size: 40px;
+	z-index: 101;
+	top: 10px;
+	left: 20px;
+	cursor: pointer;
+}
+#sure .sure-clear{
+	text-align: center;
+    font-size: 30px;
+    width: 120px;
+    height: 40px;
+    margin-left: 10px;
+    margin-top: 20px;
+    background: #fece01;
+    border-radius: 10px;
+    line-height: 35px;
+    cursor: pointer;
+}

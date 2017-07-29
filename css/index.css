@@ -1,0 +1,311 @@
+.layout{
+	width: 100%;
+	/*max-width: 768px;设计图原因 不让它放大*/
+	min-width: 500px;/* 为了更好的布局*/
+	margin: 0 auto;
+}
+@font-face {
+  font-family: 'iconfont';  /* project id 303153 */
+  src: url('../fonts/iconfont.eot');
+  src: url('../fonts/iconfont.eot') format('embedded-opentype'),
+  url('../fonts/iconfont.woff') format('woff'),
+  url('../fonts/iconfont.ttf') format('truetype'),
+  url('../fonts/iconfont.svg#iconfont') format('svg');
+}
+
+.header{
+	/*设计图原因 不让它放大*/
+	min-width: 300px;/* 为了更好的布局*/
+	margin: 0 auto;
+	background: #fece01;
+	height: 102px;
+	width: 100%;
+	position: relative;
+}
+.header .icon_logo{
+	width: 64px;
+	height: 64px;
+	position: absolute;
+	top: 23px;
+	left: 36px;
+}
+.header .icon_logo img{
+	width: 100%;
+}
+.header form{
+	width: 100%;
+	height: 102px;
+	padding-left: 147px;
+	padding-right: 170px;
+}
+.header form input{
+	padding-right: 20px;
+}
+.header form .iconfont{
+	font-family:"iconfont";
+	position: absolute;
+	font-size: 45px;
+	color: #fff;
+	top: 30px;
+	left: 170px;
+}
+.header input{
+	width: 100%;
+	height: 70px;
+	border-radius: 35px;
+	opacity: 0.4;
+	margin-top: 18px;
+	padding-left: 70px;
+	font-size: 30px;
+}
+.header_right{
+	width: 128px;
+	height: 60px;
+}
+.icon_scan{
+	width: 45px;
+	height: 102px;
+	line-height: 102px;
+	font-family: "iconfont";
+	position: absolute;
+	top: 0px;
+	right: 102px;
+	font-size: 45px;
+	color: #fff;
+}
+.icon_notice{
+	width: 45px;
+	height: 102px;
+	line-height: 102px;
+	font-family: "iconfont";
+	position: absolute;
+	top: 0px;
+	right: 18px;
+	font-size: 45px;
+	color: #fff;
+}
+/* 轮播图*/
+.jd_banner{
+	width: 100%;
+	position: relative;
+	overflow: hidden;
+}
+.jd_banner ul:first-child {
+	width: 1000%;
+	-webkit-transform: translateX(-10%);
+	   -moz-transform: translateX(-10%);
+	    -ms-transform: translateX(-10%);
+	     -o-transform: translateX(-10%);
+	        transform: translateX(-10%);
+}
+.jd_banner ul:first-child li {
+	width: 10%;
+	float: left;
+}
+.jd_banner ul:first-child li a{
+	width: 100%;
+	display: block;
+}
+.jd_banner ul:first-child li a img{
+	width: 100%;
+	display: block;/* 为了清除图片的“基线”：abcdydadfg 以a的底线为对齐的线称基线
+						font-size:0;  vertical-align:middle; 这三种方法都可以去除基线*/
+}
+.jd_banner ul:last-child{
+	width: 134px;
+	height: 6px;
+	position: absolute;
+	bottom: 6px;
+	left: 50%;
+	margin-left: -54px;
+}
+.jd_banner ul:last-child li{
+	width: 6px;
+	height: 6px;
+	float: left;
+	border-radius: 3px;
+	border: 1px solid #fff;
+	margin-left: 10px;
+}
+.jd_banner ul:last-child li.now{
+	background: #fff;
+}
+.jd_banner ul:last-child li:nth-child(1){
+	margin-left: 0;
+}
+/* 导航栏*/
+.nav{
+	height: 185px;
+	width: 100%;
+	padding-top: 28px;
+	border-bottom: 1px solid #d3d3d3;
+	background: #fff;
+}
+.nav ul{
+	display: block;
+}
+.nav ul li{
+	float: left;
+	width: 25%;
+	display: block;
+	text-align: center;
+	position: relative;
+}
+.nav ul li a{
+	width: 100%;
+	height: 130px;
+	text-align: center;
+	display: block;
+}
+.nav ul li .icon_nav{
+	display: inline-block;
+	font-family: "iconfont";
+	height: 90px;
+	width: 90px;
+	border-radius: 45px;
+	font-size: 50px;
+	background: #fff;
+	text-align: center;
+	line-height: 90px;
+}
+.nav ul li a p{
+	font-size: 24px;
+	padding-top: 16px;
+}
+.nav ul li .icon_nav1{
+	color: #fff;
+	background: #feb21e;
+}
+.nav ul li .icon_nav2{
+	color: #fff;
+	background: #f16665;
+}
+.nav ul li .icon_nav3{
+	color: #fff;
+	background: #f6699e;
+}
+.nav ul li .icon_nav4{
+	color: #fff;
+	background: #fece02;
+}
+.nav ul li .tip{
+	background: #fd0100;
+	color: #fff;
+	width: 58px;
+	height: 28px;
+	position: absolute;
+	top: -8px;
+	right: 25px;
+	border-radius: 8px;
+	line-height: 28px;
+	font-size: 22px;
+}
+/* 产品*/
+.product{
+	width: 95%;
+	background: #fdfbfe;
+	border: 1px solid #d3d3d3;
+	margin: 0 auto;
+	margin-top: 20px;
+	padding-top: 40px;
+	padding-left: 40px;
+	padding-bottom: 30px
+}
+.product .product_ms{
+	display: inline-block;
+	width: 50%;
+	vertical-align: top;
+}
+.product .product_ms h3{
+	color: #f04e92;
+	font-size: 34px;
+	margin-bottom: 36px;
+}
+.product .product_ms p{
+	font-size: 22px;
+}
+.product .product_ms p span{
+	color: #f6699e;
+	font-size: 50px;
+}
+.product .product_ms p i{
+	color: #f6699e;
+	font-style: normal;
+}
+.product .product_ms hr{
+	width: 80%;
+	color: #000;
+}
+.product .product_ms p:last-child{
+	color: #818181;
+}
+.product img{
+	width: 45%;
+}
+.pro_ft{
+	height: 120px;
+	width: 100%;
+}
+
+/* footer*/
+.footer{
+	height: 130px;
+	width: 100%;
+	/*max-width: 768px;设计图原因 不让它放大*/
+	min-width: 300px;/* 为了更好的布局*/
+	margin: 0 auto;
+	position: fixed;
+	bottom:0;
+	background: #fff;
+	margin: 0 auto;
+	padding-top: 10px;
+	border-top: 2px solid #ddd;
+}
+.footer ul li{
+	float: left;
+	width: 25%;
+	display: inline-block;
+	text-align: center;
+	padding-top: 14px;
+	cursor: pointer;
+}
+.footer ul li a{
+	overflow: hidden;
+}
+.footer ul li span{
+	font-size: 65px;
+}
+.footer ul li p{
+	font-size: 22px;
+}
+.footer ul .action {
+	color: #fea31e;
+}
+.icon_main{
+	font-family: "iconfont";
+}
+.icon_sup{
+	font-family: "iconfont";
+}
+.icon_my{
+	font-family: "iconfont";
+}
+.icon_car{
+	font-family: "iconfont";
+	position: relative;
+}
+.footer ul li a span:hover{
+	color: #fea31e;
+}
+.many{
+	position: absolute;
+	font-size: 18px;
+    background: red;
+    width: 30px;
+    height: 30px;
+    border-radius: 15px;
+    color: white;
+    line-height: 30px;
+    top: -20px;
+    right: -8px;
+}

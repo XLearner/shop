@@ -1,0 +1,119 @@
+/* 商品详细信息 */
+.back{
+	width: 70px;
+	height: 70px;
+	position: absolute;
+	top: 20px;
+	left: 20px;
+}
+.back a {
+	display: block;
+	font-size: 40px;
+	background: #222;
+	height: 70px;
+	width: 70px;
+	line-height: 66px;
+	text-align: center;
+	color: white;
+	border-radius:35px;
+	opacity: 0.5;
+}
+.article{
+	width: 100%;
+}
+.article .tu{
+	height: 400px;
+	overflow: hidden;
+	text-align: center;
+	border-bottom: 1px solid #ddd;
+}
+.article .tu img{
+	margin-top: -100px;
+	width: 100%;
+    max-width: 768px;
+}
+.article .message{
+	padding: 10px 0;
+	border-bottom: 2px solid #ddd;
+}
+.article .message p{
+	margin-top: 10px;
+	font-size: 16px;
+}
+.article .message span{
+	font-size: 20px;
+	color: red;
+}
+.article .size{
+	padding: 20px 0;
+	border-bottom: 2px solid #ddd;
+	margin-bottom: 10px;
+}
+.article .size p{
+	font-size: 20px;
+	padding-left: 2px;
+}
+.article .size ul{
+	overflow: hidden;
+	margin-top: 10px;
+	width: 100%;
+}
+.article .size ul li{
+	float: left;
+	width: 16%;
+	height: 30px;
+	text-align: center;
+	border: 1px solid #eee;
+	margin-left: 6px;
+	line-height: 30px;
+	cursor: pointer;
+}
+.article .size ul li:first-child{
+	margin-left: 0;
+}
+.article .size ul .select{
+	background: #ddd;
+}
+.article pre{
+	font-size: 16px;
+}
+.article pre p{
+	padding-top:20px;
+	font-size: 20px;
+
+}
+
+
+/* footer */
+.buy{
+	height: 70px;
+	width: 100%;
+	/*max-width: 768px;设计图原因 不让它放大*/
+	min-width: 300px;/* 为了更好的布局*/
+	margin: 0 auto;
+	position: fixed;
+	bottom:0px;
+	background: #fff;
+	margin: 0 auto;
+	background: #fff;
+}
+.buy ul {
+	overflow: hidden;
+	width: 100%;
+}
+.buy ul li{
+	float: left;
+	width: 53%;
+	height: 50px;
+	font-size: 24px;
+	text-align: center;
+	line-height: 50px;
+	cursor: pointer;
+	background: #fece01;
+	border-radius: 10px;
+	margin-top: 10px;
+}
+.buy ul li:first-child{
+	width: 45%;
+	margin-right: 10px;
+}

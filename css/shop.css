@@ -1,0 +1,55 @@
+.article ul li{
+	width: 98%;
+	border: 1px solid #ddd;
+	margin: 0 auto;
+	margin-top: 10px;
+	position: relative;
+}
+.article ul li .shop-list{
+	display: block;
+	overflow: hidden;
+}
+.article ul li .shop-list img{
+	width: 50%;
+	display: inline-block;
+	text-decoration: none;
+}
+.article ul li .shop-list .descript{
+	display: inline-block;
+	vertical-align: top;
+	width: 49%;
+}
+.article ul li .shop-list .descript h2{
+	padding: 5px;
+	padding-left: 0;
+	font-size: 22px;
+}
+.article ul li .shop-list .descript p{
+	font-size: 18px;
+	color: #666;
+}
+.article ul li .shop-list .descript p:last-child {
+	position: absolute;
+	font-size: 18px;
+	bottom: 15px;
+}
+.article ul li .shop-list .descript p:last-child span{
+	font-size: 16px;
+	text-decoration: line-through;
+	padding-left: 5px;
+}
+.article ul li .add-list{
+	display:block;
+	font-family: "iconfont";
+	position: absolute;
+	bottom: 15px;
+	right: 20px;
+	font-size: 50px;
+    width: 60px;
+    height: 60px;
+    line-height: 70px;
+	text-align:center;
+	background: #fece01;
+	border-radius:30px;
+	cursor: pointer;
+}
