@@ -5,6 +5,22 @@
 	margin-top: 10px;
 	position: relative;
 }
+.article ul li .dele{
+	position: absolute;
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: #ddd;
+    line-height: 35px;
+    text-align: center;
+    font-size: 36px;
+    top: 10px;
+    left: 10px;
+    cursor: pointer;
+}
+.article ul li .dele:hover{
+	background: #999;
+}
 .article ul li .shop-list{
 	display: block;
 	overflow: hidden;

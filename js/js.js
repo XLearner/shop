@@ -1,6 +1,7 @@
 
 $(document).ready(function(){
 	var li = '';
+	// 详细商品信息
 	var $size = $(".size ul li");
 	$size.each(function(key, value){
 			$(value).click(function(){
@@ -10,7 +11,6 @@ $(document).ready(function(){
 				if(!(this.className)){
 				this.className += "select";}
 			}
-		
 		);
 	})
 	var addG = $('#addG');
@@ -37,23 +37,27 @@ $(document).ready(function(){
 	var jiesuan = $('#clear_all');
 	var all =  window.localStorage.all || '0' ;
 	jiesuan.html(all);
-	$("#temp").html(localStorage.all);
+	// $("#temp").html(localStorage.all);
 	many.html(window.localStorage.much);
+	// var count = 0;
 	add_list.each(function(key, value){
 		$(value).bind('click', function(){
 			much = many.html();
 			much++;
 			var lin = parseInt($($(value).prev()).attr('name'));
-			li = "<li><a class='shop-list'>" + $(value).prev().html() + "</a></li>";
+			li = '<li name="' + lin + '"><div class="dele">x</div><a class="shop-list">' + $(value).prev().html() + '</a></li>';
+			// 初始化
 			if(localStorage.addLi == undefined){
 				localStorage.addLi = '';
 			}
-			window.localStorage.addLi += li;
+			window.localStorage.setItem('addLi' + much, li); // 存入localstorage
+			// count++;
+			localStorage.addLi = much;
 			all = parseInt(all) + parseInt(lin);
 			window.localStorage.much = much;
 			window.localStorage.all = all;
 			jiesuan.html(window.localStorage.all);
-			$("#temp").html(all);
+			// $("#temp").html(all);
 			many.each(function(key, value){
 			$(value).html(window.localStorage.much);
 	})
@@ -65,11 +69,14 @@ $(document).ready(function(){
 		var acarinit = $('.article ul li:eq(0)').html();
 		 $(carinit).remove();
 		window.localStorage.tempLi = acarinit;
+		var q = '<li class="car-init">' + localStorage.tempLi + '</li>';
+		window.localStorage.tempLi = q;
 	}
+
 	//结算按钮
 	var clear = $("#clear-btn");
 	clear.bind('click', function(){
-		var q = '<li class="car-init">' + localStorage.tempLi + '</li>';
+		q = localStorage.tempLi;
 		alert('购买成功');
 		if(localStorage.addLi != undefined){
 			$(".article ul li").remove();
@@ -89,14 +96,20 @@ $(document).ready(function(){
 	if(mSName == '3'){
 		var car = $(".article ul");	
 		if(localStorage.addLi){
-			car.append(localStorage.addLi);
+			// car.append(localStorage.addLi);
+			for (var i = 0; i <= localStorage.addLi; i++) {
+				car.append(localStorage.getItem('addLi' + i));
+			}
+		}
+		if(localStorage.addLi == 0){
+			car.append(localStorage.tempLi);
 		}
 	}
-	
+
 
 		var qq = $(".clear-btn");
 		$(qq).bind('click', function(){
-			if(localStorage.addLi == undefined){alert('无商品');}
+			if(localStorage.addLi == undefined || localStorage.much == 0){alert('无商品');}
 			else{
 			$('#sure').css('display', 'block').css('height', $(document).height());
 			var ppp = $('.article ul').html();
@@ -123,4 +136,64 @@ $(document).ready(function(){
 			})
 		});
 
+		// 购物车的删除功能
+		var dele = $(".article .dele");
+		// console.log(dele);
+		dele.each(function(key, val){
+			$(val).bind('click', function(){
+				// 记录有多少商品加入购物车
+				var liNum = localStorage.addLi;
+				// 获取需要删除的商品标签
+				var pre = $(this).parent();
+				var money = pre.attr('name');
+				money = jiesuan.html() - money;
+				localStorage.all = money;
+				// console.log(money);
+				preOut = $(pre).prop('outerHTML');
+
+				// 与内存中的商品做比对，删除内存中的商品
+				for(var i = 0; i < localStorage.length; i++){
+					var items = localStorage.getItem('addLi' + i);
+					// debugger;
+					if (dui(preOut, items)) {
+						// debugger;
+						localStorage.removeItem('addLi' + i);
+						var much1 = localStorage.addLi - 1;
+						localStorage.setItem('addLi', much1);
+						localStorage.setItem('much', much1);
+						pre.remove();
+						
+						break;
+					}
+				}
+
+				// 总金额需要变动，商品数也需要变动
+				many.html(localStorage.much);
+				jiesuan.html(money);
+
+
+				// 刷新页面，重新显示购物车中商品
+				var car = $(".article ul");	
+				// car.html('');
+				if(localStorage.addLi == 0){
+					// car.append(localStorage.addLi);
+					// for (var i = 0; i <= localStorage.addLi; i++) {
+					// 	// car.append(localStorage.getItem('addLi' + i));
+					// }
+					car.append(localStorage.tempLi);
+				}
+			});
+		});
 });
+var dui = function(a, b){
+	// debugger;
+		if(!b){
+			return false;
+		}
+		for(var i = 0; i < a.length; i++){
+			if(a[i] != b[i]){
+				return false;
+			}
+		}
+		return true;
+	};
